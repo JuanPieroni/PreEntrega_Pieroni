@@ -12,31 +12,31 @@ const ItemListContainer = (props) => {
   /* si la info no esta a mano : hay que hacer un estado y un efecto
    */
 
-  const [estado, setEstado] = useState([]);
+ /*  const [estado, setEstado] = useState([]) */;
   /* USar useParams tambien aca */
 
   /* PLANTILLA DE ASYNC MOCK */
 
-  useEffect(() => {
+/*   useEffect(() => {
     const pedido = new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(/* los productos que voy a usar */);
+      //  resolve( los productos que voy a usar );
       }, 2000);
     });
 
     pedido
       .then((resultados) => {
-        /* setEstado(resultado) */
+       // setEstado(resultado)
         console.log(resultado);
       })
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, []); */
 
   return (
     <>
-      <ItemList loquevamosaMostrar={productos} />
+   {/*  <ItemList loquevamosaMostrar={productos} /> */}
       <h1>{props.greeting}</h1>
     </>
   );

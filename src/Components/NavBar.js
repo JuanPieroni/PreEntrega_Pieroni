@@ -1,38 +1,27 @@
 import CartWidget from "./CartWidget";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import { NavLink } from "react-router-dom";
+ 
 
 const NavBar = () => {
   return (
     <>
-      <Navbar bg="light" expand="lg">
-        <Container>
-          <Navbar.Brand href="#home">
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <CartWidget />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Quienes Somos</Nav.Link>
-              <NavDropdown title="Productos" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#capilares">
-                  {/* aca van los LINKS o navLink to="category/capilares (NO ID)" */}
-                  Capilares
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#faciales">Faciales</NavDropdown.Item>
-                <NavDropdown.Item href="#corporales">
-                  Corporales
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-    </>
+         <header className="header"> 
+          
+      <NavLink to="/">
+        <h1 className="header__title">Titulo</h1>
+      
+      </NavLink>
+      <nav className="header__nav">
+        <NavLink to="/category/1" className="header__link link">categoria 1</NavLink>
+        <NavLink to="/category/2" className="header__link link">categoria 2</NavLink>
+        <NavLink to="/category/3" className="header__link link">categoria 3</NavLink>
+        <NavLink to="/cart" className="header__link link"><CartWidget/></NavLink>
+      </nav>
+    </header>
+          </>
   );
 };
+      
+
 
 export default NavBar;
