@@ -9,20 +9,21 @@ const NavBar = () => {
     <>
       <Navbar bg="light" expand="lg">
         <Container>
-            <CartWidget />
           <Navbar.Brand href="#home">
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <CartWidget />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#link">Quienes Somos</Nav.Link>
               <NavDropdown title="Productos" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">
+                <NavDropdown.Item href="#capilares">
+                  {/* aca van los LINKS o navLink to="category/capilares (NO ID)" */}
                   Capilares
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Faciales</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
+                <NavDropdown.Item href="#faciales">Faciales</NavDropdown.Item>
+                <NavDropdown.Item href="#corporales">
                   Corporales
                 </NavDropdown.Item>
               </NavDropdown>
